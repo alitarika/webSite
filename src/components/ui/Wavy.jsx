@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "../../utils/cn";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
 
 export const Wavy = ({
@@ -8,11 +8,7 @@ export const Wavy = ({
   className,
   containerClassName,
   colors,
-  waveWidth,
-  backgroundFill,
-  blur = 12,
-  waveOpacity = 0.6,
-  ...props
+  blur,
 }) => {
   const noise = createNoise3D();
   let w, h, nt, i, x, ctx, canvas;
@@ -40,16 +36,17 @@ export const Wavy = ({
     "#294e61",
     "#4aa6c4",
     "#264253",
+    "#4aa6c4",
   ];
   const drawWave = (n) => {
-    nt += 0.0025;
+    nt += 0.0017;
     for (i = 0; i < n; i++) {
       ctx.beginPath();
-      ctx.lineWidth = waveWidth || 70;
+      ctx.lineWidth = 77;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         var y = noise(x / 1000, 0.3 * i, nt) * 100;
-        ctx.lineTo(x, y + h * 0.6);
+        ctx.lineTo(x, y + h * 0.55);
       }
       ctx.stroke();
       ctx.closePath();
@@ -58,10 +55,10 @@ export const Wavy = ({
 
   let animationId;
   const render = () => {
-    ctx.fillStyle = backgroundFill || "#000";
-    ctx.globalAlpha = waveOpacity || 0.5;
+    ctx.fillStyle = "#070e13";
+    ctx.globalAlpha = 0.6;
     ctx.fillRect(0, 0, w, h);
-    drawWave(6);
+    drawWave(7);
     animationId = requestAnimationFrame(render);
   };
 
@@ -96,9 +93,7 @@ export const Wavy = ({
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
-      <div className={cn("relative z-20", className)} {...props}>
-        {children}
-      </div>
+      <div className={cn("relative z-20", className)}>{children}</div>
     </div>
   );
 };
