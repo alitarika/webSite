@@ -1,10 +1,10 @@
 import React from "react";
+import { Wavy } from "./components/ui/Wavy";
 
 const App = () => {
   return (
     <div>
-      <div className="bg-dark size-24 w-96 text-light">asdasdsad</div>
-      <p className="text-light">asd</p>
+      <Wavy containerClassName="max-w-7xl mx-auto pb-40"></Wavy>
     </div>
   );
 };
