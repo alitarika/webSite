@@ -6,7 +6,7 @@ import sketchyImage from "../../assets/q.png";
 export const Hero = () => {
   return (
     <Wavy containerClassName="max-w-7xl mx-auto pb-40" blur="16">
-      <div className="flex gap-6 max-w-7xl md:gap-0 md:flex-row flex-col-reverse w-[90vw] mx-auto">
+      <div className="flex gap-6 max-w-7xl md:gap-0 md:flex-row flex-col-reverse w-[90vw] mx-auto mt-12">
         <div className="md:w-2/3 md:my-auto h-[30vh] md:h-fit md:pt-12">
           <p className=" text-5xl md:text-6xl text-center  bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-[40%] via-slate-200 via-[60%] to-slate-400 to-[80%]">
             Ali Tarik Alacam
