@@ -1,19 +1,24 @@
 import React from "react";
-import { Wavy } from "./components/ui/Wavy";
 import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/sections/Hero";
 
 const App = () => {
   return (
     <div>
       <Navbar>
-        <div>alitarika.</div>
+        <a className="text-primary" href="#">
+          alitarika.
+        </a>
         <div className="flex items-center justify-between w-2/3">
-          <p>About</p>
+          <a href="#qwe">qwe</a>
           <p>Projects</p>
           <p>Contact</p>
         </div>
       </Navbar>
-      <Wavy containerClassName="max-w-7xl mx-auto pb-40" blur="16"></Wavy>
+      <Hero />
+
+      <div className="bg-dark w-[100vw] h-[1000px]"></div>
+      <div id="qwe" className="bg-red-500 h-12 w-full"></div>
       <div className="bg-dark w-[100vw] h-[1000px]"></div>
     </div>
   );
