@@ -6,7 +6,7 @@ import profileImage from "../src/assets/p.png";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar>
         <a
           className="text-primary flex md:hover:saturate-150 md:transition-all"
@@ -42,7 +42,7 @@ const App = () => {
       </Navbar>
       <Hero />
       <About />
-    </div>
+    </>
   );
 };
 
