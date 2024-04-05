@@ -18,12 +18,12 @@ export const Hero = () => {
         <div className="md:w-1/3 mx-auto w-[200px] h-[171px] md:h-[30vh] md:flex md:mt-0">
           <img
             src={profileImage}
-            alt=""
+            alt="profile image"
             className="md:absolute w-full h-full md:w-[300px] md:h-[245px] rounded-[70px]"
           />
           <img
             src={sketchyImage}
-            alt=""
+            alt="profile image black and white"
             className="hidden md:block md:absolute  w-[300px] h-[245px] grayscale rounded-[70px] transition-opacity duration-500 hover:opacity-0"
           />
         </div>
