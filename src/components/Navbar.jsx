@@ -3,7 +3,7 @@ export const Navbar = ({ children, className }) => {
   return (
     <header
       className={cn(
-        "z-[100] backdrop-blur-[6px] backdrop-saturate-200 sticky top-0 border-b bg-dark/60 border-light/[0.2]",
+        "z-[100] backdrop-blur-[6px] backdrop-saturate-200 sticky top-0 border-b bg-dark/80 border-light/[0.2]",
         className
       )}
     >
