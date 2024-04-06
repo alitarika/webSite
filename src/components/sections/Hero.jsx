@@ -11,7 +11,7 @@ export const Hero = () => {
             Ali Tarik Alacam
           </h1>
           <h1 className="text-3xl md:text-4xl pt-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 from-[40%] via-slate-200 via-[60%] to-slate-400 to-[80%]">
-            Software Developer
+            Full Stack Web Developer
           </h1>
         </div>
         <div className="md:w-1/3 mx-auto w-[200px] h-[171px] md:h-[30vh] md:flex md:mt-0">
