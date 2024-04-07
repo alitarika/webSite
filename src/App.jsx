@@ -4,6 +4,7 @@ import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import profileImage from "../src/assets/p.png";
+import { Footer } from "./components/sections/Footer";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
+      <Footer />
     </>
   );
 };
