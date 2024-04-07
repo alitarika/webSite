@@ -1,6 +1,6 @@
 export const SkillCard = ({ skill }) => {
   return (
-    <div className=" inline-block lg:w-[72px] lg:h-[102px] w-[66px] h-[96px] m-1 border-light/30 border rounded-lg">
+    <div className="inline-block lg:w-[80px] lg:h-[112px] w-[66px] h-[96px] mx-1 border-light/30 border rounded-lg shadow-light/20 shadow-inner">
       <img
         src={skill.logo}
         alt={`${skill.name} logo`}
