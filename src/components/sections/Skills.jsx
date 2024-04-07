@@ -1,4 +1,4 @@
-import { Skill } from "../ui/Skill";
+import { SkillCard } from "../ui/SkillCard";
 import jsLogo from "../../assets/js.svg";
 import html5Logo from "../../assets/html5.svg";
 import css3Logo from "../../assets/css3.svg";
@@ -34,7 +34,7 @@ export const Skills = () => {
   return (
     <div>
       {skillDataArray.map((skill, index) => (
-        <Skill key={index} skill={skill} />
+        <SkillCard key={index} skill={skill} />
       ))}
     </div>
   );

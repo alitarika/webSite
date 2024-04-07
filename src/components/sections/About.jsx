@@ -2,9 +2,9 @@ import { H2 } from "../ui/H2";
 import { Skills } from "./Skills";
 export const About = () => {
   return (
-    <div id="about" className="text-light w-[90vw] mx-auto">
+    <div id="about" className="text-light w-[90vw] max-w-7xl mx-auto">
       <H2>About me</H2>
-      <div className="bg-dark w-full h-[1000px]">
+      <div className="bg-dark w-full mb-24">
         <div className="px-2">
           <p>
             I am a full stack web developer based in Amsterdam with a passion
