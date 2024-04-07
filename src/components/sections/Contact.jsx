@@ -51,7 +51,6 @@ export const Contact = () => {
               <input
                 className="form-input peer"
                 type="text"
-                autoFocus
                 autoComplete="name"
                 placeholder=" "
                 name="name"
