@@ -1,18 +1,18 @@
 import { SkillCard } from "../ui/SkillCard";
-import jsLogo from "../../assets/js.svg";
-import html5Logo from "../../assets/html5.svg";
-import css3Logo from "../../assets/css3.svg";
-import twLogo from "../../assets/tw.svg";
-import reactLogo from "../../assets/react.svg";
-import flaskLogo from "../../assets/flask.svg";
-import sqlLogo from "../../assets/sql.svg";
-import pythonLogo from "../../assets/python.svg";
-import githubLogo from "../../assets/github.svg";
-import gitLogo from "../../assets/git.svg";
-import sassLogo from "../../assets/sass.svg";
-import nodejsLogo from "../../assets/nodejs.svg";
-import expressLogo from "../../assets/express.svg";
-import mongoLogo from "../../assets/mongo.svg";
+import jsLogo from "../../assets/skillSvg/js.svg";
+import html5Logo from "../../assets/skillSvg/html5.svg";
+import css3Logo from "../../assets/skillSvg/css3.svg";
+import twLogo from "../../assets/skillSvg/tw.svg";
+import reactLogo from "../../assets/skillSvg/react.svg";
+import flaskLogo from "../../assets/skillSvg/flask.svg";
+import sqlLogo from "../../assets/skillSvg/sql.svg";
+import pythonLogo from "../../assets/skillSvg/python.svg";
+import githubLogo from "../../assets/skillSvg/github.svg";
+import gitLogo from "../../assets/skillSvg/git.svg";
+import sassLogo from "../../assets/skillSvg/sass.svg";
+import nodejsLogo from "../../assets/skillSvg/nodejs.svg";
+import expressLogo from "../../assets/skillSvg/express.svg";
+import mongoLogo from "../../assets/skillSvg/mongo.svg";
 
 export const Skills = () => {
   const skillDataArray = [
