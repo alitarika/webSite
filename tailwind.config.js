@@ -44,9 +44,21 @@ export default {
             transform: "translateX(-100%)",
           },
         },
+        shimmer: {
+          "0%": {
+            backgroundPosition: "-50% 0",
+          },
+          "87%": {
+            backgroundPosition: "-50% 0",
+          },
+          "100%": {
+            backgroundPosition: "-250% 0",
+          },
+        },
       },
       animation: {
         slide: "slide 12s linear infinite",
+        shimmer: "shimmer 7s linear infinite",
       },
     },
   },

@@ -1,10 +1,11 @@
 import React from "react";
+import profileImage from "../src/assets/p.png";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
-import profileImage from "../src/assets/p.png";
 import { Footer } from "./components/sections/Footer";
+import { Contact } from "./components/sections/Contact";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
       <Footer />
     </>
   );

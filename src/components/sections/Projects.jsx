@@ -2,8 +2,8 @@ import { H2 } from "../ui/H2";
 
 export const Projects = () => {
   return (
-    <div>
+    <section id="projects">
       <H2>Projects</H2>
-    </div>
+    </section>
   );
 };

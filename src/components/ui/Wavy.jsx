@@ -79,7 +79,7 @@ export const Wavy = ({
   }, []);
 
   return (
-    <div
+    <section
       className={cn(
         "h-screen flex flex-col items-center justify-center",
         containerClassName
@@ -94,6 +94,6 @@ export const Wavy = ({
         }}
       ></canvas>
       <div className={cn("relative z-20", className)}>{children}</div>
-    </div>
+    </section>
   );
 };
