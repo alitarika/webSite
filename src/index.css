@@ -24,7 +24,7 @@
     @apply absolute start-2 text-sm text-primary duration-200 transform -translate-y-2 scale-[0.77] -top-[3px] z-10 origin-[0] bg-dark rounded-md px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-primary-300 peer-placeholder-shown:-translate-y-2 peer-placeholder-shown:top-4 peer-focus:-top-[3px] peer-focus:px-2 peer-focus:text-primary peer-focus:scale-[0.77];
   }
   .form-btn {
-    @apply sm:ml-auto shadow-inner shadow-primary-700 active:shadow-primary-300 hover:opacity-90 block w-full sm:w-48  bg-secondary  text-dark rounded-md py-2 active:saturate-150 disabled:cursor-not-allowed animate-shimmer bg-[linear-gradient(110deg,#308aaa,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#308aaa)] bg-[length:200%_100%] px-6 font-bold text-lg focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-offset-0;
+    @apply sm:ml-auto shadow-inner shadow-primary-700 active:shadow-primary-300 hover:opacity-90 block w-full sm:w-48  bg-secondary  text-light rounded-md py-2 active:saturate-150 disabled:cursor-not-allowed animate-shimmer bg-[linear-gradient(110deg,#308aaa,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#308aaa)] bg-[length:200%_100%] px-6 font-bold text-lg focus:outline-none focus:ring-1 focus:ring-secondary focus:ring-offset-0;
   }
 }
 

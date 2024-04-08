@@ -1,5 +1,8 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { H2 } from "../ui/H2";
 
 export const Contact = () => {
@@ -15,6 +18,14 @@ export const Contact = () => {
 
   const handleMessageSubmit = (e) => {
     e.preventDefault();
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.message === ""
+    ) {
+      errortoast("Please fill in all the fields.");
+      return;
+    }
     setIsSubmitting(true);
     emailjs
       .sendForm("service_68ladm9", "template_lqi0q9o", form.current, {
@@ -23,13 +34,22 @@ export const Contact = () => {
       .then(
         () => {
           setFormData({ name: "", email: "", message: "" });
-          alert(
-            `Message Sent! \n ${formData.name}  sent message as: \n \n "${formData.message}"`
-          );
+          toast.success("Your message is successfully sent.", {
+            role: "alert",
+            position: "top-center",
+            autoClose: 5000,
+            pauseOnHover: true,
+            draggable: true,
+            transition: Bounce,
+            closeOnClick: true,
+            className:
+              "!bg-primary-700 !text-light mt-8 min-w-[360px] max-w-[90vw] mx-auto",
+            hideProgressBar: true,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
-          alert(`Could not send your message. ${error.text}`);
+          errortoast(`Couldn't send your message. ${error.text}`);
         }
       )
       .finally(() => {
@@ -40,6 +60,7 @@ export const Contact = () => {
   return (
     <section id="contact">
       <H2>Contact</H2>
+      <ToastContainer limit={3} />
       <div>
         <section className="form-card">
           <h3 className="form-title">
@@ -55,7 +76,6 @@ export const Contact = () => {
                 placeholder=" "
                 name="name"
                 id="name"
-                required
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -73,7 +93,6 @@ export const Contact = () => {
                 placeholder=" "
                 name="email"
                 id="email"
-                required
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -86,7 +105,6 @@ export const Contact = () => {
 
             <div className="relative">
               <textarea
-                required
                 className="form-input peer"
                 rows="7"
                 placeholder=" "
@@ -110,4 +128,19 @@ export const Contact = () => {
       </div>
     </section>
   );
+};
+
+const errortoast = (message) => {
+  return toast.error(message, {
+    role: "alert",
+    position: "top-center",
+    autoClose: 5000,
+    pauseOnHover: true,
+    draggable: true,
+    transition: Bounce,
+    closeOnClick: true,
+    className:
+      "!bg-red-700 !text-light mt-8 min-w-[360px] max-w-[90vw] mx-auto",
+    hideProgressBar: true,
+  });
 };
