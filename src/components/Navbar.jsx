@@ -7,7 +7,7 @@ export const Navbar = ({ children, className }) => {
         className
       )}
     >
-      <nav className="w-full flex items-center text-light justify-between px-6 h-16 mx-auto">
+      <nav className=" max-w-[1400px] w-full flex items-center text-light justify-between px-6 h-16 mx-auto">
         {children}
       </nav>
     </header>
