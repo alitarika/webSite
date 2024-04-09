@@ -32,9 +32,9 @@ export const Projects = () => {
   // }, []);
   return (
     <section id="projects" className="max-w-7xl mx-auto w-[90vw] mb-24">
-      <H2 className="mb-36 md:mb-24 z-50">Projects</H2>
-      <div className="flex flex-col-reverse md:flex md:flex-row w-full">
-        <div className="flex flex-col md:pr-6 -mt-52 md:mt-0">
+      <H2 className="mb-36 sm:mb-24 z-50">Projects</H2>
+      <div className="flex flex-col-reverse sm:flex sm:flex-row w-full">
+        <div className="flex flex-col sm:pr-6 -mt-52 sm:mt-0">
           <div>
             1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolor
             aperiam beatae, quisquam repudiandae similique voluptatem sunt.
@@ -108,8 +108,8 @@ export const Projects = () => {
 
           {/* Here comes the texts! as map? */}
         </div>
-        <div className="sticky top-48 mx-auto  w-full flex md:block before:content-[''] before:w-full before:h-[280px] before:absolute before:bg-dark before:-top-48 md:before:content-[] after:content-[''] md:after:content-[] after:bg-gradient-to-b after:from-dark after:via-dark/60 after:to-transparent after:w-full after:h-24 after:absolute after:top-[88px]">
-          <div className="sticky top-24 md:left-0 md:top-1/2 mx-auto">
+        <div className="sticky top-48 mx-auto  w-full flex sm:block before:content-[''] before:w-full before:h-[280px] before:absolute before:bg-dark before:-top-48 sm:before:content-[] after:content-[''] sm:after:content-[] after:bg-gradient-to-b after:from-dark after:via-dark/60 after:to-transparent after:w-full after:h-24 after:absolute after:top-[88px]">
+          <div className="sticky top-24 sm:left-0 sm:top-1/2 mx-auto">
             <MacbookFrame />
           </div>
         </div>
