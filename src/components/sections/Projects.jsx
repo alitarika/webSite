@@ -1,26 +1,20 @@
 import { useState, useEffect } from "react";
-import macbookPNG from "../../assets/macbook.png";
-import P from "../../assets/p.png";
-
 import { H2 } from "../ui/H2";
 import { MacbookFrame } from "../ui/MacbookFrame";
+import { ProjectCard } from "../ui/ProjectCard";
 
 export const Projects = () => {
+  // const [ceza, setCeza] = useState(false);
+
   // useEffect(() => {
-  //   // const [macbookContent, setMacbookContent]
-  //   const qwe = document.getElementById("qwe");
-  //   const first = document.getElementById("first");
+  //   const four = document.getElementById("four");
 
   //   const handleScroll = () => {
-  //     const rec = qwe.getBoundingClientRect().top;
-  //     const firsty = first.getBoundingClientRect().top;
-  //     console.log(firsty, rec);
-  //     if (firsty > -200) {
-  //       qwe.style.backgroundColor = "white";
-  //     } else if (firsty < -200 && firsty > -700) {
-  //       qwe.style.backgroundColor = "violet";
+  //     const rec = four.getBoundingClientRect().top;
+  //     if (rec > -200) {
+  //       setCeza(true);
   //     } else {
-  //       qwe.style.backgroundColor = "gray";
+  //       setCeza(false);
   //     }
   //   };
 
@@ -60,7 +54,7 @@ export const Projects = () => {
             aliquam sequi, eligendi placeat voluptate labore fugiat voluptates
             temporibus officia, delectus ducimus laboriosam ea esse eius?
           </div>
-          <div className="h-[500px]">
+          <div id="four" className="h-[500px]">
             4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
             obcaecati, dolorem non quae aperiam eum molestiae repellendus
             ratione officiis sapiente natus illo! Nesciunt ab odio quaerat
@@ -105,6 +99,14 @@ export const Projects = () => {
             reiciendis debitis fuga nisi corporis minus rem! Modi id quaerat
             similique debitis, enim dignissimos quo!
           </div>
+          <ProjectCard
+            flask
+            sql
+            html
+            mongo
+            css
+            project={{ name: "movieApp" }}
+          />
 
           {/* Here comes the texts! as map? */}
         </div>
