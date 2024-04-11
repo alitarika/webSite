@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { debounce } from "../../utils/debounce.js";
 import { H2 } from "../ui/H2";
 import { MacbookFrame } from "../ui/MacbookFrame";
 import { ProjectCard } from "../ui/ProjectCard";
@@ -34,10 +35,10 @@ export const Projects = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", debounce(handleScroll));
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", debounce(handleScroll));
     };
   }, []);
   return (
