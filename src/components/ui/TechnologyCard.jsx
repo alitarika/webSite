@@ -7,7 +7,7 @@ export const TechnologyCard = ({ src, tech }) => {
         title={`${tech}`}
         className="size-4 grayscale-[70%]"
       />
-      <p className="pr-[2px] text-light/70 text-xs bottom-0 content-end">
+      <p className="pl-[2px] text-light/70 text-xs bottom-0 content-end">
         {tech}
       </p>
     </div>

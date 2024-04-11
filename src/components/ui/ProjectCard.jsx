@@ -14,7 +14,7 @@ import flaskLogo from "../../assets/skillSvg/flask.svg";
 import githubLogo from "../../assets/skillSvg/github.svg";
 
 export const ProjectCard = ({
-  html = true,
+  html = false,
   css = false,
   js = false,
   py = false,
@@ -26,15 +26,19 @@ export const ProjectCard = ({
   mongo = false,
   sql = false,
   flask = false,
+  id,
+  githubLink = "https://github.com/alitarika",
+  liveLink,
+  videoLink,
   project,
 }) => {
   return (
     <div
-      id={project.name}
-      className="p-6 bg-primary/5 border-light rounded-lg shadow-lg w-full h-[500px]"
+      id={id}
+      className="p-6 min-h-[400px] border-light rounded-lg shadow-lg w-full"
     >
-      <h3 className="text-secondary text-xl text-center mb-2">
-        {project?.name}
+      <h3 className="text-secondary text-xl text-center mb-4">
+        {project.name}
       </h3>
       <div className="flex flex-row mb-6 flex-wrap">
         {html ? <TechnologyCard src={htmlLogo} tech="HTML5" /> : ""}
@@ -50,11 +54,26 @@ export const ProjectCard = ({
         {sql ? <TechnologyCard src={sqlLogo} tech="SQL" /> : ""}
         {flask ? <TechnologyCard src={flaskLogo} tech="Flask" /> : ""}
       </div>
-      <p>{project?.overview}</p>
-      <button className="flex">
-        Github{" "}
-        <img src={githubLogo} alt="github logo" className="size-6 pl-1" />
-      </button>
+      <p className="text-justify">{project.overview}</p>
+      <div className="flex flex-row justify-around mt-6">
+        <a
+          href={githubLink}
+          className="flex border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github{" "}
+          <img src={githubLogo} alt="github logo" className="size-6 pl-1" />
+        </a>
+        <a
+          href={liveLink ? liveLink : videoLink}
+          className="flex border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {liveLink ? "Live Link" : "Video Link"}
+        </a>
+      </div>
     </div>
   );
 };

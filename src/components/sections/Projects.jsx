@@ -2,120 +2,137 @@ import { useState, useEffect } from "react";
 import { H2 } from "../ui/H2";
 import { MacbookFrame } from "../ui/MacbookFrame";
 import { ProjectCard } from "../ui/ProjectCard";
+import wordgameGIF from "../../assets/projectGif/wordgame.gif";
+import movieappGIF from "../../assets/projectGif/movieapp.gif";
+import blogGIF from "../../assets/projectGif/blog.gif";
+import swipeGIF from "../../assets/projectGif/swipe.gif";
 
 export const Projects = () => {
-  // const [ceza, setCeza] = useState(false);
+  const [imageSource, setImageSource] = useState(wordgameGIF);
 
-  // useEffect(() => {
-  //   const four = document.getElementById("four");
+  useEffect(() => {
+    const one = document.getElementById("1");
+    const two = document.getElementById("2");
+    const three = document.getElementById("3");
+    const four = document.getElementById("4");
 
-  //   const handleScroll = () => {
-  //     const rec = four.getBoundingClientRect().top;
-  //     if (rec > -200) {
-  //       setCeza(true);
-  //     } else {
-  //       setCeza(false);
-  //     }
-  //   };
+    const handleScroll = () => {
+      const onetop = one.getBoundingClientRect().top;
+      const twotop = two.getBoundingClientRect().top;
+      const threetop = three.getBoundingClientRect().top;
+      const fourtop = four.getBoundingClientRect().top;
+      const threshold = window.innerHeight * 0.6;
 
-  //   window.addEventListener("scroll", handleScroll);
+      if (twotop > threshold) {
+        setImageSource(wordgameGIF);
+      } else if (fourtop <= threshold) {
+        setImageSource(swipeGIF);
+      } else if (threetop <= threshold) {
+        setImageSource(blogGIF);
+      } else if (twotop <= threshold) {
+        setImageSource(movieappGIF);
+      }
+    };
 
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <section id="projects" className="max-w-7xl mx-auto w-[90vw] mb-24">
+    <section id="projects" className="max-w-7xl mx-auto w-[90vw] mb-24 lg:mb-0">
       <H2 className="mb-36 sm:mb-24 z-50">Projects</H2>
       <div className="flex flex-col-reverse sm:flex sm:flex-row w-full">
-        <div className="flex flex-col sm:pr-6 -mt-52 sm:mt-0">
-          <div>
-            1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolor
-            aperiam beatae, quisquam repudiandae similique voluptatem sunt.
-            Rerum assumenda facere blanditiis minima modi magni quisquam nisi
-            deleniti quos repudiandae soluta eligendi impedit a expedita
-            architecto, corporis ducimus cupiditate iusto. Autem doloremque
-            minus ea! Autem quibusdam consequatur omnis, modi non tempore
-            architecto beatae suscipit alias nulla labore eaque dolores magnam
-            vero mollitia excepturi vitae quasi laboriosam ipsam nostrum
-            repellendus. Eius aliquid voluptate fugiat quod alias assumenda id,
-            numquam non quis nulla qui sequi placeat soluta vitae dolor
-            molestiae dolorum doloribus labore reprehenderit, accusantium
-            tempore ut! Molestias veniam quasi velit iure eaque.
-          </div>
-          <div>
-            2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            autem eaque eum asperiores tempore odit, minima nobis placeat at,
-            eos iste dolor reprehenderit suscipit harum cupiditate error nam
-            perferendis vitae.
-          </div>
-          <div className="h-[500px]">
-            3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            aliquam sequi, eligendi placeat voluptate labore fugiat voluptates
-            temporibus officia, delectus ducimus laboriosam ea esse eius?
-          </div>
-          <div id="four" className="h-[500px]">
-            4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            obcaecati, dolorem non quae aperiam eum molestiae repellendus
-            ratione officiis sapiente natus illo! Nesciunt ab odio quaerat
-            perspiciatis enim animi ipsum eligendi quibusdam similique itaque.
-            Earum dolorum, vero quisquam, et sequi iste veniam odio optio magnam
-            quod quam laboriosam! Ipsam, cupiditate!
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-            eveniet? Ad, aspernatur? Facere cupiditate consequuntur, facilis,
-            amet obcaecati praesentium, inventore eligendi perspiciatis ducimus
-            recusandae nostrum! Corrupti cupiditate harum cum facere voluptatum,
-            quas eum similique laboriosam repellat perspiciatis perferendis quos
-            architecto quam iusto iure praesentium est veniam officiis suscipit,
-            temporibus natus minus. Culpa assumenda rerum pariatur ea ullam
-            autem modi consequatur sunt id tempora, itaque similique quae animi
-            iste ut, enim illo aspernatur at dolorem, delectus accusantium.
-            Neque voluptatibus, incidunt quaerat quo vero tempora molestias quod
-            quis fugit quidem, eum accusamus, pariatur consectetur temporibus!
-            Ullam, nulla nisi itaque dolore error modi blanditiis non sapiente,
-            beatae asperiores odio voluptatem quae fuga nam porro dolorum
-            perferendis suscipit aperiam soluta, ab ratione ipsa laboriosam est?
-            Ipsa quod reprehenderit odit dolor. Adipisci eum quaerat molestias
-            reprehenderit ea magnam quasi nulla necessitatibus consequuntur
-            repellat molestiae reiciendis quos sed, sapiente animi repudiandae
-            similique corrupti accusamus porro eaque deserunt nihil distinctio
-            rem odio? Perferendis odit ipsam enim eum dolore sed nulla, illum
-            quo vero dicta quibusdam tenetur necessitatibus modi voluptatum
-            dolorem at tempora voluptatem eius dolorum minima quisquam iure
-            distinctio facilis? Obcaecati odio animi a laudantium velit natus
-            minima voluptatibus facere sint, ipsum aliquid necessitatibus
-            corrupti incidunt beatae doloremque praesentium optio mollitia iste
-            officia temporibus harum. Ipsa minus error odio consequatur alias!
-            Repellat laborum nisi repellendus veniam. Inventore, veniam ad iste,
-            optio a iure adipisci sint obcaecati similique ea vel dicta?
-            Sapiente quo, modi delectus ratione, ab repudiandae iste laudantium
-            fugiat aliquam reprehenderit quis cum! Eveniet illum deserunt
-            officiis odit molestiae, delectus eligendi quam eum, quibusdam
-            aspernatur inventore facere ipsum eius harum cum modi minus
-            voluptates beatae rerum iusto veniam expedita incidunt quo! Animi
-            quasi aut voluptatum beatae dolor odit autem, adipisci aliquid
-            reiciendis debitis fuga nisi corporis minus rem! Modi id quaerat
-            similique debitis, enim dignissimos quo!
-          </div>
-          <ProjectCard
-            flask
-            sql
-            html
-            mongo
-            css
-            project={{ name: "movieApp" }}
-          />
-
+        <div className="flex flex-col sm:pr-6 -mt-52 lg:pb-40 sm:mt-0">
+          {projectData.map((project, i) => (
+            <ProjectCard
+              key={project.name}
+              project={project}
+              id={i + 1}
+              {...project.technologiesUsed}
+              githubLink={project.githubLink}
+              liveLink={project.liveLink}
+              videoLink={project.videoLink}
+            />
+          ))}
           {/* Here comes the texts! as map? */}
         </div>
-        <div className="sticky top-48 mx-auto  w-full flex sm:block before:content-[''] before:w-full before:h-[280px] before:absolute before:bg-dark before:-top-48 sm:before:content-[] after:content-[''] sm:after:content-[] after:bg-gradient-to-b after:from-dark after:via-dark/60 after:to-transparent after:w-full after:h-24 after:absolute after:top-[88px]">
-          <div className="sticky top-24 sm:left-0 sm:top-1/2 mx-auto">
-            <MacbookFrame />
+        <div
+          id="frameOUT"
+          className="sticky top-48 mx-auto  w-full flex sm:block before:content-[''] before:w-full before:h-[280px] before:absolute before:bg-dark before:-top-48 sm:before:content-[] after:content-[''] sm:after:content-[] after:bg-gradient-to-b after:from-dark after:via-dark/60 after:to-transparent after:w-full after:h-24 after:absolute after:top-[88px]"
+        >
+          <div
+            id="frameIN"
+            className="sticky top-24 sm:left-0 sm:top-1/2 mx-auto"
+          >
+            <MacbookFrame imageSource={imageSource} />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+const projectData = [
+  {
+    name: "Word Game",
+    overview:
+      "Word Game is a web application designed to help you (and I since I actively use it) learn a language in which you type the word-translation pair first and then you play to choose the correct translation. It works with mongoDB so your word-translation pairs are stored to be used later on. Simply, create your account with a username and a password, navigate to create word page and create at least 4 word pairs to be able to play the game. If you make mistake, the word you were mistaken is stored differently and you can check them afterwards to target your weak words. In the home page you will also see a random word everytime you navigate to or refresh the word with the button. You can also see all of the words you have created in the word list page either alphabetically or creation time.",
+    technologiesUsed: {
+      html: true,
+      css: true,
+      js: true,
+      react: true,
+      tw: true,
+      node: true,
+      ex: true,
+      mongo: true,
+    },
+    githubLink: "https://github.com/alitarika/wordGame",
+    liveLink: "https://word-game-lang.vercel.app/",
+  },
+  {
+    name: "Movie App",
+    overview:
+      "When deciding on which movie to watch with a friend, it does save time to know what your friend liked to watch, whether or not that person actually watched a particular movie in your mind, what ratings and nominations the movie received, who was the director, who has written the scenario, who played in the movie etc. etc. The website is created so that the people can have the information mentioned above with few clicks. A person registers with a username and a password hence becoming a user. The person searchs for friends with their usernames and sends them friend requests. In the case the friend request is accepted they become friends and able to see each other's comments, ratings, friends and buckets. When someone comments and posts a rating on a movie. Only the friends of that person can see that someone's ratings and comments on their feeds (by pressing the movieapp logo), on that someone's user profile and the movie's page.",
+    technologiesUsed: {
+      html: true,
+      css: true,
+      js: true,
+      py: true,
+      flask: true,
+      sql: true,
+    },
+    githubLink: "https://github.com/alitarika/movieAppCs50",
+    videoLink: "https://youtu.be/waOJ3GsgK8Q?si=rHdUIqDw0_VavEte&t=49",
+  },
+  {
+    name: "Blog",
+    overview:
+      "I developed a blog website as I deemed a good exercise for a MERN stack (MongoDB, Express.js, React.js, Node.js) project. I specifically focused on and set up a robust backend, utilizing Expres.js and MongoDB for data storage. Gained a valuable experience in implementing CRUD (Create, Read, Update, Delete) operations, user authentication and deploying applications, overall enhancing my proficiency as a web developer.",
+    technologiesUsed: {
+      html: true,
+      css: true,
+      js: true,
+      react: true,
+      tw: true,
+      node: true,
+      ex: true,
+      mongo: true,
+    },
+    githubLink: "https://github.com/alitarika/blogMERN",
+    liveLink: "https://blog-mern-sable.vercel.app/",
+  },
+  {
+    name: "Swipe",
+    overview:
+      "A recreation of the (now) old look of the Swipe built to better grasp the core concepts of the modern raw cascading style sheets.",
+    technologiesUsed: {
+      html: true,
+      css: true,
+    },
+    githubLink: "https://github.com/alitarika/swipeCSS",
+    liveLink: "https://swipe-css.vercel.app/",
+  },
+];
