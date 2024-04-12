@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { cn } from "./utils/cn";
 import profileImage from "../src/assets/p.png";
 import { Navbar } from "./components/Navbar";
+import { Socials } from "./components/Socials";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
@@ -45,6 +46,7 @@ const App = () => {
   }, []);
   return (
     <>
+      <Socials />
       <Navbar>
         <a
           className={cn(
