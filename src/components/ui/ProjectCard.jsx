@@ -58,7 +58,7 @@ export const ProjectCard = ({
       <div className="flex flex-row justify-around mt-6">
         <a
           href={githubLink}
-          className="flex border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
+          className="flex font-semibold border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -67,7 +67,7 @@ export const ProjectCard = ({
         </a>
         <a
           href={liveLink ? liveLink : videoLink}
-          className="flex border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
+          className="font-semibold flex border text-primary border-secondary rounded-lg py-2 px-8 animate-shimmer bg-[linear-gradient(110deg,#070e13,40%,#05ff9f,49%,#05ff9f,51%,#05ff9f,51%,#070e13)] bg-[length:200%_100%] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-0 hover:saturate-200 hover:scale-105"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -7,24 +7,37 @@ export const About = () => {
       <div className="bg-dark w-full mb-24">
         <div className="px-2">
           <p>
-            I am a full stack web developer based in Amsterdam with a passion
-            for <span className="text-secondary">problem-solving</span> and
-            coding. If I am not in front of the computer, I am probably reading,
-            in the gym or grabbing coffee with a friend. <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis
-            pellentesque id nibh tortor. Donec pretium vulputate sapien nec
-            sagittis <span className="text-secondary">aliquam</span> . Faucibus
-            vitae aliquet nec ullamcorper sit amet. Sit amet aliquam id diam.
-            Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Enim{" "}
-            <span className="text-secondary">sit amet venenatis</span> urna
-            cursus eget.
+            While I started applying for jobs, LinkedIn was persistently
+            offering me data analyst jobs as if I knew anything about that
+            field. So, I delved into what it actually was until I came across
+            the python programming language part. And, that was how I ended up
+            typing “Hello World” into my terminal. That moment was my epiphany,
+            I was hooked from the get-go, I discovered my passion for{" "}
+            <span className="text-secondary">
+              making magic out of 0’s and 1’s.
+            </span>
             <br />
             <br />
-            Quis commodo odio aenean sed adipiscing diam donec adipiscing. Morbi
-            leo urna molestie at elementum. Amet mattis vulputate enim nulla
-            aliquet porttitor.
+            Over the course of a year, I devoted myself to learning the tools
+            and language of software development, earning Udemy, freeCodeCamp,
+            coursera certificates, completing courses like CS50x, and crafting
+            projects that stretched my skills. Today, I proudly stand as a{" "}
+            <span className="text-secondary">
+              full-stack web developer
+            </span>{" "}
+            based in Amsterdam, driven by a passion for{" "}
+            <span className="text-secondary">problem-solving</span>, web
+            development, programming and also coding itself.
+            <br />
+            <br />
+            As a person who is a firm believer of{" "}
+            <span className="text-secondary">lifelong learning</span>, I am open
+            to embark on a journey of learning in the field and get my hands
+            dirty. I am also{" "}
+            <span className="text-secondary">
+              open to try out new technologies
+            </span>
+            .
           </p>
         </div>
         <div>

@@ -59,7 +59,7 @@ export const Contact = () => {
   };
   return (
     <section id="contact">
-      <H2>Contact</H2>
+      <H2 className="mb-20">Contact</H2>
       <ToastContainer limit={3} />
       <div>
         <section className="form-card">
