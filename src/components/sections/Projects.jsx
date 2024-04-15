@@ -12,6 +12,14 @@ export const Projects = () => {
   const [imageSource, setImageSource] = useState(wordgameGIF);
 
   useEffect(() => {
+    const preloadImages = [wordgameGIF, movieappGIF, blogGIF, swipeGIF];
+    preloadImages.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
+
+  useEffect(() => {
     const one = document.getElementById("1");
     const two = document.getElementById("2");
     const three = document.getElementById("3");
