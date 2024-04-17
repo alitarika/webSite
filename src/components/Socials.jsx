@@ -15,7 +15,7 @@ export const Socials = () => {
       >
         <Linkedin className="fill-secondary size-8 sm:hover:scale-105" />
       </a>
-      <a href="" target="_blank" rel="noopener noreferrer">
+      <a href="https://drive.google.com/file/d/16aDKtpN_7azxvAn0l5gdEe67PamXhzKi/view" target="_blank" rel="noopener noreferrer">
         <Cv className="size-8 fill-secondary sm:hover:scale-105" />
       </a>
     </div>
