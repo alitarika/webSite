@@ -16,7 +16,7 @@ export const Socials = () => {
         <Linkedin className="fill-secondary size-8 sm:hover:scale-105" />
       </a>
       <a
-        href="https://drive.google.com/file/d/16aDKtpN_7azxvAn0l5gdEe67PamXhzKi/view"
+        href="https://docs.google.com/document/d/1_pPd-b0nHr6YgHgO56tzwOE6Rg63uNt2LTFRBAiNGIQ/view"
         target="_blank"
         rel="noopener noreferrer"
       >
