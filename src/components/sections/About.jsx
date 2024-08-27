@@ -25,7 +25,7 @@ export const About = () => {
             <span className="text-secondary">
               full-stack web developer
             </span>{" "}
-            based in Amsterdam, driven by a passion for{" "}
+            based in Istanbul, driven by a passion for{" "}
             <span className="text-secondary">problem-solving</span>, web
             development, programming and also coding itself.
             <br />
